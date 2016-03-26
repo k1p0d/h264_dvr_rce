@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+__author__ = 'Rotem Kerner'
 
 from sys import argv
 import optparse
