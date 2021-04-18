@@ -43,9 +43,9 @@ def main():
     # A little hack to handle read timeouts, since urllib2 doesnt give us this functionality.
     socket.setdefaulttimeout(10)
 
-    # is -c flag on check if target url is vulnrable.
+    # is -c flag on check if target url is vulnerable.
     if options.checkvuln is True:
-        print "[!] Checking if target \"%s\" is vulnable..." % target_url.netloc
+        print "[!] Checking if target \"%s\" is vulnerable..." % target_url.netloc
         try:
 
             # Write file
